@@ -1,9 +1,11 @@
 const client = require('../client');
+const { handleUserData, addOrRemovePoints } = require('../../hooks/handleUserData');
+const activityPoints = require('../../activityPoints/activityPoints');
 // listen message reaction events
 client.on('messageReactionAdd', async (reaction, user) => {
-    console.log('new reaction')
+    handleUserData({ ...user, type: 'reaction', value: activityPoints.reaction })
 });
 // listen message reaction remove events
 client.on('messageReactionRemove', async (reaction, user) => {
-    console.log('reaction removed')
+    addOrRemovePoints.remove({ ...user, type: 'reaction', value: activityPoints.reaction })
 })
