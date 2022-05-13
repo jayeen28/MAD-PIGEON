@@ -1,6 +1,6 @@
-const Invites = require('../models/invites');
+const Invites = require('../../models/leaderboard/invites');
 const { handleUserData } = require('./handleUserData');
-const activityPoints = require('../activityPoints/activityPoints');
+const activityPoints = require('../../leaderboard/activityPoints/activityPoints');
 /**
  * This function get called when a new user get in to the server.
  * @param {Array} invites It carries all the created invites by the users of the server.

@@ -1,8 +1,7 @@
-const client = require('../client/client');
+const client = require('../../client/client');
 const { MessageEmbed } = require('discord.js');
-const User = require('../models/user');
-const log = require('../extras/logger');
-const logger = require('../extras/logger');
+const User = require('../../models/leaderboard/user');
+const logger = require('../../extras/logger');
 
 const intervalMiliseconds = process.env.LEADERBOARD_UPDATE_INTERVAL * 60 * 60 * 1000;
 

@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../../models/leaderboard/user');
 
 //hit reply duplication need to be fixed.
 /**

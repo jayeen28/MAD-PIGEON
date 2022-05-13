@@ -1,7 +1,7 @@
-const VcModel = require('../models/vcModel');
-const activityPoints = require('../activityPoints/activityPoints');
-const { handleUserData } = require('../hooks/handleUserData');
-const client = require('../client/client');
+const VcModel = require('../../models/leaderboard/vcModel');
+const activityPoints = require('../../leaderboard/activityPoints/activityPoints');
+const { handleUserData } = require('./handleUserData');
+const client = require('../../client/client');
 
 /**
  * This function handles the event for a specific user when he/she join the voice channel.

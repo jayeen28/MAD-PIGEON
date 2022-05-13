@@ -1,5 +1,5 @@
 const client = require('../client');
-const { handleMemberAdd, inviteCreate, inviteDelete } = require('../../hooks/handleInvites');
+const { handleMemberAdd, inviteCreate, inviteDelete } = require('../../hooks/leaderboard/handleInvites');
 
 //This module handles the invitation system. Like when a new user joins the server, when a new invitation link is created or when a invitation link is deleted.
 client.on('guildMemberAdd', async (member) => {

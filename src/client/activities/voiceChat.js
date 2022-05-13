@@ -1,5 +1,5 @@
 const client = require('../client')
-const { handleStart, handleEnd } = require('../../hooks/handleVcEvents');
+const { handleStart, handleEnd } = require('../../hooks/leaderboard/handleVcEvents');
 const logger = require('../../extras/logger');
 
 const amaVcId = process.env.VC_ID;

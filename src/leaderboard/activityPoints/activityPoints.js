@@ -1,5 +1,5 @@
-const Points = require('../models/points');
-const client = require('../client/client');
+const Points = require('../../models/leaderboard/points');
+const client = require('../../client/client');
 const token = process.env.BOT_TOKEN;//bot token
 
 const findPoints = async () => {//get the points from database.

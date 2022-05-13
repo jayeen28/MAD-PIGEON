@@ -1,6 +1,6 @@
 const client = require('../client')
-const { handleUserData, addOrRemovePoints } = require('../../hooks/handleUserData');
-const activityPoints = require('../../activityPoints/activityPoints');
+const { handleUserData, addOrRemovePoints } = require('../../hooks/leaderboard/handleUserData');
+const activityPoints = require('../../leaderboard/activityPoints/activityPoints');
 //listen message events.
 client.on('messageCreate', async (message) => {
     if (message.author.bot) return;

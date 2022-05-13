@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const activitiesPoints = require('../activityPoints/activityPoints');//get the points from the required location.
+const activitiesPoints = require('../leaderboard/activityPoints/activityPoints');//get the points from the required location.
 // Logger
 const logger = require('../extras/logger');
 

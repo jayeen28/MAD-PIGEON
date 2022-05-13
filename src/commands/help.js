@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { checkRole } = require('../hooks/checkUser');
+const { checkRole } = require('../hooks/leaderboard/checkUser');
 
 const normalUserFields = [
     {

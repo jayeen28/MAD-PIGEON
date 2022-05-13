@@ -2,15 +2,14 @@
 require('dotenv').config();
 const connectDB = require('./db/connect');
 connectDB(process.env.MONGO_URL);
-require('./activityPoints/activityPoints');
+require('./leaderboard/activityPoints/activityPoints');
 const client = require('./client/client');
 require('./client/activities/message');
 require('./client/activities/voiceChat');
 require('./client/activities/inviteTracking');
 require('./client/activities/reaction');
 require('./client/interactions/interactions');
-const activitiesPoints = require('./activityPoints/activityPoints');
-const handleRegCommands = require('./hooks/handleRegCommands');
+const handleRegCommands = require('./hooks/leaderboard/handleRegCommands');
 // Logger
 const logger = require('./extras/logger');
 
@@ -23,5 +22,5 @@ client.on('ready', () => {
         type: 'success'
     })
     handleRegCommands();//regting the commands
-    require('./leaderboard/leaderboard');//require the leaderboard in when bot is ready.
+    require('./leaderboard/LbChannelManage/LbChannelManage');//require the leaderboard in when bot is ready.
 });

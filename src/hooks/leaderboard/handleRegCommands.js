@@ -1,10 +1,10 @@
-const client = require('../client/client');
+const client = require('../../client/client');
 const fs = require('fs');
 const { Collection } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require("discord-api-types/v9");
 // Logger
-const logger = require('../extras/logger');
+const logger = require('../../extras/logger');
 
 //get the command files with .js extension from the container folder.
 const commandFiles = fs.readdirSync('src/commands').filter(file => file.endsWith(".js"));
@@ -12,7 +12,7 @@ const commands = [];
 client.commands = new Collection();
 
 for (const file of commandFiles) {//loop through all the files which contains the commands.
-    const command = require(`../commands/${file}`);
+    const command = require(`../../commands/${file}`);
     commands.push(command.data.toJSON());
     client.commands.set(command.data.name, command)
 }

@@ -1,7 +1,7 @@
 const { addOrRemovePoints } = require('./handleUserData');
 const findUser = require('./handleFindUser');
 // Logger
-const logger = require('../extras/logger');
+const logger = require('../../extras/logger');
 
 /**
  * This function is used for giving reply to the user.

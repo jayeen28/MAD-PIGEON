@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const User = require('../models/user');
+const User = require('../models/leaderboard/user');
 // Logger
 const logger = require('../extras/logger');
 
