@@ -11,8 +11,12 @@ const normalUserFields = [
         value: 'This command will show the position of the user in the leaderboard.\n Example: /position'
     },
     {
-        name: 'userinvited',
-        value: 'This command will show how many user has been joined from a specific users invite link.\n Example: /userinvited @username'
+        name: 'playmusic',
+        value: 'This command will play music from a youtube link.\n Example: /playmusic https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    },
+    {
+        name: 'controlmusic',
+        value: 'This command will control the music. Available methods are: play,pause,stop.\n Example: /controlmusic:stop'
     },
     {
         name: 'help',
@@ -48,6 +52,14 @@ const ownerOrAdminFields = [
     {
         name: 'userinvited',
         value: 'This command will show how many user has been joined from a specific users invite link.\n Example: /userinvited @username'
+    },
+    {
+        name: 'playmusic',
+        value: 'This command will play music from a youtube link.\n Example: /playmusic https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    },
+    {
+        name: 'controlmusic',
+        value: 'This command will control the music. Available methods are: play,pause,stop.\n Example: /controlmusic:stop'
     },
     {
         name: 'help',
