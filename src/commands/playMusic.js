@@ -18,9 +18,8 @@ module.exports = {
         const youtubeLinkMatch = youtubeLink.match(youtubeLinkRegex);
         if (!youtubeLinkMatch) return interaction.reply({ content: 'Invalid youtube link.', ephemeral: true });
         if (playerInstance.playing) return interaction.reply({ content: 'There is already a song playing. Please stop the music first using "/controlmusic:stop" command.', ephemeral: true });
-        interaction.reply({ content: `Playing ${youtubeLinkMatch[0]}...` });
         videoToMP3(youtubeLinkMatch[0])
-            .then(url => handleVC(interaction, url))
+            .then(audioUrl => handleVC(interaction, audioUrl, youtubeLinkMatch[0]))
             .catch(err => console.error(err));
     }
 }
