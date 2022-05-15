@@ -26,11 +26,5 @@ module.exports = {
         .setDescription("Leaderboard of this server."),
     async execute(interaction) {
         makeReply(interaction);
-        // const { normalUser } = await checkRole(interaction);
-        // if (!normalUser) {//if the user is the owner or the admin
-        //     makeReply(interaction);
-        // } else {
-        //     interaction.reply({ content: 'You are not allowed to use this command.', ephemeral: true });
-        // }
     }
 }
