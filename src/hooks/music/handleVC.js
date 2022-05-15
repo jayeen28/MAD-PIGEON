@@ -33,6 +33,7 @@ module.exports = {
             console.log('[+] Started playing audio.');
         })
         player.on(AudioPlayerStatus.Idle, () => {
+            playerInstance.playing = false;
             connection.destroy();
         })
     }
