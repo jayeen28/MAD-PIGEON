@@ -57,5 +57,5 @@ const runInterval = async (channel) => {
 
 client.channels.fetch(process.env.LEADERBOARD_CHANNEL_ID)//get the channel where the leaderboard will be shown.
     .then(channel => {
-        runInterval(channel)
+        // runInterval(channel)
     })
