@@ -5,7 +5,7 @@ module.exports = {
     handleVC: (interaction, url) => {
         const player = playerInstance.init();
         const connection = joinVoiceChannel({
-            channelId: process.env.MUSIC_CHANNEL,
+            channelId: process.env.VC_ID,
             guildId: process.env.GUILD_ID,
             adapterCreator: interaction.member.guild.voiceAdapterCreator,
         });
