@@ -3,6 +3,7 @@ const fs = require('fs');
 const { Collection } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require("discord-api-types/v9");
+const logger = require('../../extras/logger');
 
 //get the command files with .js extension from the container folder.
 const commandFiles = fs.readdirSync('src/commands').filter(file => file.endsWith(".js"));
@@ -30,12 +31,12 @@ const regCommands = async () => {
                 await rest.put(Routes.applicationCommands(CLIENT_ID), {
                     body: commands
                 });
-                console.log('[+] Commands registered globally.')
+                logger({ message: `Commands registered globally.`, type: 'success' });
             } else {
                 await rest.put(Routes.applicationGuildCommands(CLIENT_ID, process.env.GUILD_ID), {
                     body: commands
                 });
-                console.log('[+] Commands registered locally.')
+                logger({ message: `Commands registered locally.`, type: 'success' });
             }
         }
         catch (err) {

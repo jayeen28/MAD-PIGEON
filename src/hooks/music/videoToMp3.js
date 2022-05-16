@@ -5,7 +5,7 @@ module.exports = {
     videoToMP3: async (link) => {
         const info = await ytdl.getInfo(link);
         const audio = info.formats.find(format => format.mimeType === 'audio/mp4; codecs="mp4a.40.2"' && format.audioBitrate === 128);
-        if (!audio) throw new Error('No audio found.');
+        if (!audio) return null;
         return audio.url;
     }
 }

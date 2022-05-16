@@ -14,12 +14,14 @@ module.exports = {
     async execute(interaction) {
         const inputedData = interaction.options._hoistedOptions;
         const youtubeLink = inputedData[0].value;
+        await interaction.reply({ content: `Command received.`, ephemeral: true });
         const youtubeLinkRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?/;
         const youtubeLinkMatch = youtubeLink.match(youtubeLinkRegex);
-        if (!youtubeLinkMatch) return interaction.reply({ content: 'Invalid youtube link.', ephemeral: true });
-        if (playerInstance.playing) return interaction.reply({ content: 'There is already a song playing. Please stop the music first using "/controlmusic:stop" command.', ephemeral: true });
-        videoToMP3(youtubeLinkMatch[0])
-            .then(audioUrl => handleVC(interaction, audioUrl, youtubeLinkMatch[0]))
-            .catch(err => console.error(err));
+        if (!youtubeLinkMatch) return await interaction.editReply({ content: `Invalid youtube link (${youtubeLink}).` });
+        if (playerInstance.playing) return await interaction.editReply({ content: 'There is already a song playing. Please stop the music first using "/controlmusic:stop" command.', ephemeral: true });
+        await interaction.editReply({ content: `Downloading audio . . .` });
+        const res = await videoToMP3(youtubeLinkMatch[0]);
+        if (!res) return await interaction.editReply({ content: `Invalid youtube link (${youtubeLink}).` });
+        await handleVC(interaction, res, youtubeLinkMatch[0]);
     }
 }
