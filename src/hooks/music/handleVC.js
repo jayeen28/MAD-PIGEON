@@ -31,7 +31,7 @@ module.exports = {
         player.on(AudioPlayerStatus.Playing, async () => {
             playerInstance.playing = true;
             logger({ message: `Started playing music`, type: 'success' });
-            await interaction.followUp({ content: `Now playing: ${youtubeLink}`, ephemeral: false });
+            await interaction.editReply({ content: `Now playing: ${youtubeLink}`, ephemeral: false });
         })
         player.on(AudioPlayerStatus.Idle, () => {
             logger({ message: `Music finished.`, type: 'success' });
