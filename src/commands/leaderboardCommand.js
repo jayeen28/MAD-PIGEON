@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const User = require('../models/leaderboard/user');
-const { checkRole } = require('../hooks/leaderboard/checkUser');
+const { checkRole } = require('../hooks/common/checkUser');
 
 const makeReply = async (interaction) => {
     const allUsers = await User.find({});

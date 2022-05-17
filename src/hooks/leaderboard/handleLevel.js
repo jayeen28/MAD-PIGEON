@@ -1,4 +1,4 @@
-const handleDm = require('./handleDm')
+const handleDm = require('../common/handleDm')
 
 const bonus = {//bonus points for each level
     10: 1000,

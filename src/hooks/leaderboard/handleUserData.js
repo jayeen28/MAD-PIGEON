@@ -1,7 +1,7 @@
 const User = require('../../models/leaderboard/user');
 const handleLevel = require('./handleLevel');
 const activityPoints = require('../../leaderboard/activityPoints/activityPoints');
-const handleDm = require('./handleDm');
+const handleDm = require('../common/handleDm');
 
 //This object contains the points add and remove methods
 const addOrRemovePoints = {

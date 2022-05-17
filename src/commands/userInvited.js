@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const findUser = require('../hooks/leaderboard/handleFindUser');
+const findUser = require('../hooks/common/handleFindUser');
 const Invites = require('../models/leaderboard/invites');
-const { checkRole, isOwnReq } = require('../hooks/leaderboard/checkUser');
+const { checkRole, isOwnReq } = require('../hooks/common/checkUser');
 
 /**
  * This function is used for giving reply to the user.

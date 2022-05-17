@@ -1,5 +1,5 @@
 const { addOrRemovePoints } = require('./handleUserData');
-const findUser = require('./handleFindUser');
+const findUser = require('../common/handleFindUser');
 // Logger
 const logger = require('../../extras/logger');
 
