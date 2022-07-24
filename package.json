@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "@discordjs/rest": "^0.4.1",
@@ -17,8 +17,5 @@
     "ytdl-core": "^4.11.0",
     "discord-api-types": "^0.31.2",
     "@discordjs/builders": "^0.13.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.16"
   }
 }
