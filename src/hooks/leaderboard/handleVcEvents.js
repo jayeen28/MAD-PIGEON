@@ -34,7 +34,7 @@ const handleEnd = async (userId) => {
         if (duration > 1) {
             const totalPoints = Math.round(duration * activityPoints.voicechat);
             client.users.fetch(userId)
-                .then(user => handleUserData({ ...user, type: 'voicechat', value: totalPoints }))
+                .then(user => handleUserData({ ...user, type: 'voiceChat', value: totalPoints }))
                 .catch(err => console.error(err))
         }
         await VcModel.deleteOne({ userId })
