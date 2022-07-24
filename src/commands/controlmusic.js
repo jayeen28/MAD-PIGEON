@@ -7,7 +7,7 @@ module.exports = {
         .setDescription('This command can used for pause unpause and stopping the music.')
         .addStringOption(option =>
             option.setName('action')
-                .setDescription('The action you want to execute (pause/unpause/stop).')
+                .setDescription('The action you want to execute (pause/play/stop).')
                 .setRequired(true)
         ),
     async execute(interaction) {
