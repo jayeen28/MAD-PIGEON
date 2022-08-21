@@ -10,6 +10,7 @@
     "@discordjs/builders": "^0.13.0",
     "@discordjs/rest": "^0.4.1",
     "@discordjs/voice": "^0.9.0",
+    "@opensea/stream-js": "^0.0.20",
     "axios": "^0.27.2",
     "discord-api-types": "^0.31.2",
     "discord.js": "^13.6.0",
@@ -19,6 +20,7 @@
     "mongoose": "^6.3.3",
     "opensea-js": "^4.0.7",
     "web3": "^1.7.5",
+    "ws": "^8.8.1",
     "ytdl-core": "^4.10.0"
   }
 }

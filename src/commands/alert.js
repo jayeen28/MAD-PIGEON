@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const saveAlert = require('../entities/opensea/saveAlert');
+const saveAlert = require('../entities/opensea/manageAlert');
 
 module.exports = {
     data: new SlashCommandBuilder()
