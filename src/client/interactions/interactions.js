@@ -5,12 +5,11 @@ client.on('interactionCreate', async interaction => {
     const command = client.commands.get(interaction.commandName);
     if (!command) return;
     try {
-        await command.execute(interaction)
+        await command.execute(interaction);
     } catch (err) {
         console.error(err)
-        await interaction.reply({
-            content: "An error occured while executing that command.",
-            ephemeral: true
+        await interaction.editReply({
+            content: "An error occured while executing that command."
         })
     }
 })
