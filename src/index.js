@@ -9,7 +9,7 @@ require('./client/activities/voiceChat');
 require('./client/activities/inviteTracking');
 require('./client/activities/reaction');
 require('./client/interactions/interactions');
-const handleRegCommands = require('./hooks/common/handleRegCommands');
+const handleRegCommands = require('./entities/common/handleRegCommands');
 // Logger
 const logger = require('./extras/logger');
 

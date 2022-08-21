@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const handlePoints = require('../hooks/leaderboard/handlePoints');
-const { checkRole } = require('../hooks/common/checkUser');
+const handlePoints = require('../entities/leaderboard/handlePoints');
+const { checkRole } = require('../entities/common/checkUser');
 
 module.exports = {
     data: new SlashCommandBuilder()

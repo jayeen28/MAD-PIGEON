@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
-const playerInstance = require('../hooks/music/player');
+const playerInstance = require('../entities/music/player');
 
 module.exports = {
     data: new SlashCommandBuilder()

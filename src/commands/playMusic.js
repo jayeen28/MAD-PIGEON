@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { videoToMP3 } = require('../hooks/music/videoToMp3');
-const { handleVC } = require('../hooks/music/handleVC');
-const playerInstance = require('../hooks/music/player');
+const { videoToMP3 } = require('../entities/music/videoToMp3');
+const { handleVC } = require('../entities/music/handleVC');
+const playerInstance = require('../entities/music/player');
 
 module.exports = {
     data: new SlashCommandBuilder()

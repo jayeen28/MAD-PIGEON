@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const Points = require('../models/leaderboard/points');
 const activitiesPoints = require('../leaderboard/activityPoints/activityPoints');
-const { checkRole } = require('../hooks/common/checkUser');
+const { checkRole } = require('../entities/common/checkUser');
 /**
  * This function is used for updating point value both in database and locally.
  * @param {Object} interaction The interaction object.

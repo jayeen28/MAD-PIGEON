@@ -1,5 +1,5 @@
 const client = require('../client')
-const { handleStart, handleEnd } = require('../../hooks/leaderboard/handleVcEvents');
+const { handleStart, handleEnd } = require('../../entities/leaderboard/handleVcEvents');
 const logger = require('../../extras/logger');
 
 const VC_ID = process.env.VC_ID;
